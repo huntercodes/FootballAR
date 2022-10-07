@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		417A441E28EFFB3C00CB9F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */; };
 		417A442028EFFB3C00CB9F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A441F28EFFB3C00CB9F84 /* ContentView.swift */; };
-		417A442228EFFB3C00CB9F84 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 417A442128EFFB3C00CB9F84 /* Experience.rcproject */; };
 		417A442428EFFB3D00CB9F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442328EFFB3D00CB9F84 /* Assets.xcassets */; };
 		417A442728EFFB3D00CB9F84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		417A441A28EFFB3C00CB9F84 /* FootballAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417A441F28EFFB3C00CB9F84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		417A442128EFFB3C00CB9F84 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		417A442328EFFB3D00CB9F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +53,6 @@
 			children = (
 				417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */,
 				417A441F28EFFB3C00CB9F84 /* ContentView.swift */,
-				417A442128EFFB3C00CB9F84 /* Experience.rcproject */,
 				417A442328EFFB3D00CB9F84 /* Assets.xcassets */,
 				417A442528EFFB3D00CB9F84 /* Preview Content */,
 			);
@@ -142,7 +139,6 @@
 			files = (
 				417A442028EFFB3C00CB9F84 /* ContentView.swift in Sources */,
 				417A441E28EFFB3C00CB9F84 /* AppDelegate.swift in Sources */,
-				417A442228EFFB3C00CB9F84 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,13 +270,14 @@
 				DEVELOPMENT_TEAM = Z9NXKK53HS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to augment your reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,13 +302,14 @@
 				DEVELOPMENT_TEAM = Z9NXKK53HS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to augment your reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
