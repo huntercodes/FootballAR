@@ -42,13 +42,13 @@ struct ARViewContainer: UIViewRepresentable {
         
         // MARK: - Models
         let layerField = ModelEntity(
-            mesh: .generatePlane(width: 0.604, depth: 0.274),
+            mesh: .generatePlane(width: 0.274, depth: 0.604),
             materials: [distanceMarkerMaterial]
         )
         layerField.position = simd_make_float3(0, -0.0001, 0)
         
         let field = ModelEntity(
-            mesh: .generatePlane(width: 0.6, depth: 0.27),
+            mesh: .generatePlane(width: 0.27, depth: 0.6),
             materials: [fieldMaterial]
         )
         field.position = simd_make_float3(0, 0, 0)
@@ -60,70 +60,97 @@ struct ARViewContainer: UIViewRepresentable {
         midfieldLogo.position = simd_make_float3(0, 0.0001, 0)
         
         let midfieldMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
         midfieldMarker.position = simd_make_float3(0, 0.0001, 0)
         
         let rightEndzoneMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        rightEndzoneMarker.position = simd_make_float3(0.25, 0.0001, 0)
+        rightEndzoneMarker.position = simd_make_float3(0, 0.0001, 0.25)
         
         let leftEndzoneMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        leftEndzoneMarker.position = simd_make_float3(-0.25, 0.0001, 0)
+        leftEndzoneMarker.position = simd_make_float3(0, 0.0001, -0.25)
         
         let tenYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        tenYardMarker.position = simd_make_float3(-0.2, 0.0001, 0)
+        tenYardMarker.position = simd_make_float3(0, 0.0001, -0.2)
         
         let twentyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        twentyYardMarker.position = simd_make_float3(-0.15, 0.0001, 0)
+        twentyYardMarker.position = simd_make_float3(0, 0.0001, -0.15)
         
         let thirtyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        thirtyYardMarker.position = simd_make_float3(-0.1, 0.0001, 0)
+        thirtyYardMarker.position = simd_make_float3(0, 0.0001, -0.1)
         
         let fourtyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        fourtyYardMarker.position = simd_make_float3(-0.05, 0.0001, 0)
+        fourtyYardMarker.position = simd_make_float3(0, 0.0001, -0.05)
         
         let otherFourtyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherFourtyYardMarker.position = simd_make_float3(0.05, 0.0001, 0)
+        otherFourtyYardMarker.position = simd_make_float3(0, 0.0001, 0.05)
         
         let otherThirtyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherThirtyYardMarker.position = simd_make_float3(0.1, 0.0001, 0)
+        otherThirtyYardMarker.position = simd_make_float3(0, 0.0001, 0.1)
         
         let otherTwentyYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherTwentyYardMarker.position = simd_make_float3(0.15, 0.0001, 0)
+        otherTwentyYardMarker.position = simd_make_float3(0, 0.0001, 0.15)
         
         let otherTenYardMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.002, depth: 0.2699),
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherTenYardMarker.position = simd_make_float3(0.2, 0.0001, 0)
+        otherTenYardMarker.position = simd_make_float3(0, 0.0001, 0.2)
+        
+        let fieldGoalOne = try! Entity.load(named: "fieldGoal")
+        fieldGoalOne.setScale([0.0002, 0.0002, 0.0002], relativeTo: fieldGoalOne)
+        fieldGoalOne.setOrientation(
+            simd_quatf(
+                ix: 0.0,
+                iy: 1.5,
+                iz: 0.0,
+                r: 0.0
+            ),
+            relativeTo: fieldGoalOne
+        )
+        fieldGoalOne.position = simd_make_float3(0, 0.0001, 0.3)
+
+        let fieldGoalTwo = try! Entity.load(named: "fieldGoal")
+        fieldGoalTwo.setScale([0.0002, 0.0002, 0.0002], relativeTo: fieldGoalTwo)
+        fieldGoalTwo.setOrientation(
+            simd_quatf(
+                ix: 0.0,
+                iy: 0.0,
+                iz: 0.0,
+                r: 0.0
+            ),
+            relativeTo: fieldGoalTwo
+        )
+        fieldGoalTwo.position = simd_make_float3(0, 0.0001, -0.3)
+        
         
         // MARK: - Add Childs / Return View
         anchor.addChild(layerField)
@@ -140,6 +167,8 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(otherThirtyYardMarker)
         anchor.addChild(otherTwentyYardMarker)
         anchor.addChild(otherTenYardMarker)
+        anchor.addChild(fieldGoalOne)
+        anchor.addChild(fieldGoalTwo)
         arView.scene.anchors.append(anchor)
         
         return arView
