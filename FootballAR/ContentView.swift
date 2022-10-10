@@ -40,12 +40,18 @@ struct ARViewContainer: UIViewRepresentable {
             isMetallic: false
         )
         
+        let endzoneMaterial = SimpleMaterial(
+            color: .red,
+            roughness: 5,
+            isMetallic: true
+        )
+        
         // MARK: - Models
         let layerField = ModelEntity(
             mesh: .generatePlane(width: 0.274, depth: 0.604),
             materials: [distanceMarkerMaterial]
         )
-        layerField.position = simd_make_float3(0, -0.0001, 0)
+        layerField.position = simd_make_float3(0, -0.00001, 0)
         
         let field = ModelEntity(
             mesh: .generatePlane(width: 0.27, depth: 0.6),
@@ -57,13 +63,13 @@ struct ARViewContainer: UIViewRepresentable {
             mesh: .generatePlane(width: 0.027, depth: 0.027, cornerRadius: 100),
             materials: [distanceMarkerMaterial]
         )
-        midfieldLogo.position = simd_make_float3(0, 0.0001, 0)
+        midfieldLogo.position = simd_make_float3(0, 0.00001, 0)
         
         let midfieldMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        midfieldMarker.position = simd_make_float3(0, 0.0001, 0)
+        midfieldMarker.position = simd_make_float3(0, 0.00001, 0)
         
         let rightEndzoneMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
@@ -81,52 +87,52 @@ struct ARViewContainer: UIViewRepresentable {
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        tenYardMarker.position = simd_make_float3(0, 0.0001, -0.2)
+        tenYardMarker.position = simd_make_float3(0, 0.00001, -0.2)
         
         let twentyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        twentyYardMarker.position = simd_make_float3(0, 0.0001, -0.15)
+        twentyYardMarker.position = simd_make_float3(0, 0.00001, -0.15)
         
         let thirtyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        thirtyYardMarker.position = simd_make_float3(0, 0.0001, -0.1)
+        thirtyYardMarker.position = simd_make_float3(0, 0.00001, -0.1)
         
         let fourtyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        fourtyYardMarker.position = simd_make_float3(0, 0.0001, -0.05)
+        fourtyYardMarker.position = simd_make_float3(0, 0.00001, -0.05)
         
         let otherFourtyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherFourtyYardMarker.position = simd_make_float3(0, 0.0001, 0.05)
+        otherFourtyYardMarker.position = simd_make_float3(0, 0.00001, 0.05)
         
         let otherThirtyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherThirtyYardMarker.position = simd_make_float3(0, 0.0001, 0.1)
+        otherThirtyYardMarker.position = simd_make_float3(0, 0.00001, 0.1)
         
         let otherTwentyYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherTwentyYardMarker.position = simd_make_float3(0, 0.0001, 0.15)
+        otherTwentyYardMarker.position = simd_make_float3(0, 0.00001, 0.15)
         
         let otherTenYardMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
             materials: [distanceMarkerMaterial]
         )
-        otherTenYardMarker.position = simd_make_float3(0, 0.0001, 0.2)
+        otherTenYardMarker.position = simd_make_float3(0, 0.00001, 0.2)
         
         let fieldGoalOne = try! Entity.load(named: "fieldGoal")
-        fieldGoalOne.setScale([0.0002, 0.0002, 0.0002], relativeTo: fieldGoalOne)
+        fieldGoalOne.setScale([0.00013, 0.00013, 0.00013], relativeTo: fieldGoalOne)
         fieldGoalOne.setOrientation(
             simd_quatf(
                 ix: 0.0,
@@ -136,10 +142,10 @@ struct ARViewContainer: UIViewRepresentable {
             ),
             relativeTo: fieldGoalOne
         )
-        fieldGoalOne.position = simd_make_float3(0, 0.0001, 0.3)
+        fieldGoalOne.position = simd_make_float3(0, 0, 0.3)
 
         let fieldGoalTwo = try! Entity.load(named: "fieldGoal")
-        fieldGoalTwo.setScale([0.0002, 0.0002, 0.0002], relativeTo: fieldGoalTwo)
+        fieldGoalTwo.setScale([0.00013, 0.00013, 0.00013], relativeTo: fieldGoalTwo)
         fieldGoalTwo.setOrientation(
             simd_quatf(
                 ix: 0.0,
@@ -149,7 +155,19 @@ struct ARViewContainer: UIViewRepresentable {
             ),
             relativeTo: fieldGoalTwo
         )
-        fieldGoalTwo.position = simd_make_float3(0, 0.0001, -0.3)
+        fieldGoalTwo.position = simd_make_float3(0, 0, -0.3)
+        
+        let endzoneOne = ModelEntity(
+            mesh: .generatePlane(width: 0.2699, depth: 0.05),
+            materials: [endzoneMaterial]
+        )
+        endzoneOne.position = simd_make_float3(0, 0.00001, 0.275)
+        
+        let endzoneTwo = ModelEntity(
+            mesh: .generatePlane(width: 0.2699, depth: 0.05),
+            materials: [endzoneMaterial]
+        )
+        endzoneTwo.position = simd_make_float3(0, 0.00001, -0.275)
         
         
         // MARK: - Add Childs / Return View
@@ -169,6 +187,8 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(otherTenYardMarker)
         anchor.addChild(fieldGoalOne)
         anchor.addChild(fieldGoalTwo)
+        anchor.addChild(endzoneOne)
+        anchor.addChild(endzoneTwo)
         arView.scene.anchors.append(anchor)
         
         return arView
