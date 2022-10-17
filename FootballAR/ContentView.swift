@@ -36,14 +36,14 @@ struct ARViewContainer: UIViewRepresentable {
         
         let distanceMarkerMaterial = SimpleMaterial(
             color: .white,
-            roughness: 2,
+            roughness: 3,
             isMetallic: false
         )
         
         let endzoneMaterial = SimpleMaterial(
             color: .red,
-            roughness: 5,
-            isMetallic: true
+            roughness: 6,
+            isMetallic: false
         )
         
         // MARK: - Models
