@@ -21,11 +21,13 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         
-        let anchor = AnchorEntity(.plane(
-            .horizontal,
-            classification: .any,
-            minimumBounds: .zero
-        ))
+        let anchor = AnchorEntity(
+            .plane(
+                .horizontal,
+                classification: .any,
+                minimumBounds: .zero
+            )
+        )
         
         // MARK: - Materials
         let fieldMaterial = SimpleMaterial(
@@ -45,6 +47,19 @@ struct ARViewContainer: UIViewRepresentable {
             roughness: 7,
             isMetallic: false
         )
+        
+        let firstDownMaterial = SimpleMaterial(
+            color: .yellow,
+            roughness: 1,
+            isMetallic: true
+        )
+        
+        let lineOfScrimMaterial = SimpleMaterial(
+            color: .black,
+            roughness: 1,
+            isMetallic: true
+        )
+        
         
         // MARK: - Models
         let layerField = ModelEntity(
@@ -70,6 +85,18 @@ struct ARViewContainer: UIViewRepresentable {
             materials: [distanceMarkerMaterial]
         )
         midfieldMarker.position = simd_make_float3(0, 0.00001, 0)
+        
+        let lineOfScrimMarker = ModelEntity(
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
+            materials: [distanceMarkerMaterial]
+        )
+        lineOfScrimMarker.position = simd_make_float3(0, 0.00001, -0.125)
+        
+        let firstDownMarker = ModelEntity(
+            mesh: .generatePlane(width: 0.2699, depth: 0.002),
+            materials: [distanceMarkerMaterial]
+        )
+        firstDownMarker.position = simd_make_float3(0, 0.00001, -0.075)
         
         let rightEndzoneMarker = ModelEntity(
             mesh: .generatePlane(width: 0.2699, depth: 0.002),
@@ -175,6 +202,8 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(field)
         anchor.addChild(midfieldLogo)
         anchor.addChild(midfieldMarker)
+        anchor.addChild(lineOfScrimMarker)
+        anchor.addChild(firstDownMarker)
         anchor.addChild(rightEndzoneMarker)
         anchor.addChild(leftEndzoneMarker)
         anchor.addChild(tenYardMarker)
