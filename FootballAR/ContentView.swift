@@ -158,6 +158,19 @@ struct ARViewContainer: UIViewRepresentable {
         )
         otherTenYardMarker.position = simd_make_float3(0, 0.00001, 0.2)
         
+        let footballPlayerOne = try! Entity.load(named: "footballPlayer")
+        footballPlayerOne.setScale([0.00027, 0.00027, 0.00027], relativeTo: footballPlayerOne)
+        footballPlayerOne.setOrientation(
+            simd_quatf(
+                ix: 0.0,
+                iy: 0.0,
+                iz: 0.0,
+                r: 0.0
+            ),
+            relativeTo: footballPlayerOne
+        )
+        footballPlayerOne.position = simd_make_float3(0, 0, -0.075)
+        
         let fieldGoalOne = try! Entity.load(named: "fieldGoal")
         fieldGoalOne.setScale([0.00013, 0.00013, 0.00013], relativeTo: fieldGoalOne)
         fieldGoalOne.setOrientation(
@@ -196,19 +209,6 @@ struct ARViewContainer: UIViewRepresentable {
         )
         endzoneTwo.position = simd_make_float3(0, 0.00001, -0.275)
         
-        let footballPlayer1 = try! Entity.load(named: "footballPlayer")
-        footballPlayer1.setScale([0.00013, 0.00013, 0.00013], relativeTo: footballPlayer1)
-        footballPlayer1.setOrientation(
-            simd_quatf(
-                ix: 0.0,
-                iy: 0.0,
-                iz: 0.0,
-                r: 0.0
-            ),
-            relativeTo: footballPlayer1
-        )
-        footballPlayer1.position = simd_make_float3(0, 0, -0.075)
-        
         
         // MARK: - Add Childs / Return View
         anchor.addChild(layerField)
@@ -227,11 +227,11 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(otherThirtyYardMarker)
         anchor.addChild(otherTwentyYardMarker)
         anchor.addChild(otherTenYardMarker)
+        anchor.addChild(footballPlayerOne)
         anchor.addChild(fieldGoalOne)
         anchor.addChild(fieldGoalTwo)
         anchor.addChild(endzoneOne)
         anchor.addChild(endzoneTwo)
-        anchor.addChild(footballPlayer1)
         arView.scene.anchors.append(anchor)
         
         return arView
