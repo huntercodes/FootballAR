@@ -11,6 +11,7 @@
 		417A442028EFFB3C00CB9F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A441F28EFFB3C00CB9F84 /* ContentView.swift */; };
 		417A442428EFFB3D00CB9F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442328EFFB3D00CB9F84 /* Assets.xcassets */; };
 		417A442728EFFB3D00CB9F84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */; };
+		41BD22E729395D26006B884E /* footballPlayer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 41BD22E629395D26006B884E /* footballPlayer.usdz */; };
 		41DAEC3E28F2B4C900C877AD /* fieldGoal.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		417A441F28EFFB3C00CB9F84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		417A442328EFFB3D00CB9F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41BD22E629395D26006B884E /* footballPlayer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = footballPlayer.usdz; sourceTree = "<group>"; };
 		41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fieldGoal.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */,
+				41BD22E629395D26006B884E /* footballPlayer.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417A442728EFFB3D00CB9F84 /* Preview Assets.xcassets in Resources */,
+				41BD22E729395D26006B884E /* footballPlayer.usdz in Resources */,
 				417A442428EFFB3D00CB9F84 /* Assets.xcassets in Resources */,
 				41DAEC3E28F2B4C900C877AD /* fieldGoal.usdz in Resources */,
 			);

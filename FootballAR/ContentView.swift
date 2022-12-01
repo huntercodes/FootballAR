@@ -87,14 +87,14 @@ struct ARViewContainer: UIViewRepresentable {
         midfieldMarker.position = simd_make_float3(0, 0.00001, 0)
         
         let lineOfScrimMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.2699, depth: 0.002),
-            materials: [distanceMarkerMaterial]
+            mesh: .generatePlane(width: 0.2699, depth: 0.0027),
+            materials: [lineOfScrimMaterial]
         )
         lineOfScrimMarker.position = simd_make_float3(0, 0.00001, -0.125)
         
         let firstDownMarker = ModelEntity(
-            mesh: .generatePlane(width: 0.2699, depth: 0.002),
-            materials: [distanceMarkerMaterial]
+            mesh: .generatePlane(width: 0.2699, depth: 0.0027),
+            materials: [firstDownMaterial]
         )
         firstDownMarker.position = simd_make_float3(0, 0.00001, -0.075)
         
@@ -196,6 +196,19 @@ struct ARViewContainer: UIViewRepresentable {
         )
         endzoneTwo.position = simd_make_float3(0, 0.00001, -0.275)
         
+        let footballPlayer1 = try! Entity.load(named: "footballPlayer")
+        footballPlayer1.setScale([0.00013, 0.00013, 0.00013], relativeTo: footballPlayer1)
+        footballPlayer1.setOrientation(
+            simd_quatf(
+                ix: 0.0,
+                iy: 0.0,
+                iz: 0.0,
+                r: 0.0
+            ),
+            relativeTo: footballPlayer1
+        )
+        footballPlayer1.position = simd_make_float3(0, 0, -0.075)
+        
         
         // MARK: - Add Childs / Return View
         anchor.addChild(layerField)
@@ -218,6 +231,7 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(fieldGoalTwo)
         anchor.addChild(endzoneOne)
         anchor.addChild(endzoneTwo)
+        anchor.addChild(footballPlayer1)
         arView.scene.anchors.append(anchor)
         
         return arView
