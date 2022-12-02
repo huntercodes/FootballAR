@@ -31,20 +31,20 @@ struct ARViewContainer: UIViewRepresentable {
         
         // MARK: - Materials
         let fieldMaterial = SimpleMaterial(
-            color: .green,
-            roughness: 3,
+            color: .systemGreen,
+            roughness: 8,
             isMetallic: false
         )
         
         let distanceMarkerMaterial = SimpleMaterial(
             color: .white,
-            roughness: 4,
+            roughness: 8,
             isMetallic: false
         )
         
         let endzoneMaterial = SimpleMaterial(
             color: .red,
-            roughness: 7,
+            roughness: 9,
             isMetallic: false
         )
         
@@ -159,7 +159,7 @@ struct ARViewContainer: UIViewRepresentable {
         otherTenYardMarker.position = simd_make_float3(0, 0.00001, 0.2)
         
         let footballPlayerOne = try! Entity.load(named: "footballPlayer")
-        footballPlayerOne.setScale([0.00027, 0.00027, 0.00027], relativeTo: footballPlayerOne)
+        footballPlayerOne.setScale([0.00033, 0.00033, 0.00033], relativeTo: footballPlayerOne)
         footballPlayerOne.setOrientation(
             simd_quatf(
                 ix: 0.0,
@@ -172,7 +172,7 @@ struct ARViewContainer: UIViewRepresentable {
         footballPlayerOne.position = simd_make_float3(0, 0, -0.075)
         
         let fieldGoalOne = try! Entity.load(named: "fieldGoal")
-        fieldGoalOne.setScale([0.00013, 0.00013, 0.00013], relativeTo: fieldGoalOne)
+        fieldGoalOne.setScale([0.00015, 0.00015, 0.00015], relativeTo: fieldGoalOne)
         fieldGoalOne.setOrientation(
             simd_quatf(
                 ix: 0.0,
@@ -185,7 +185,7 @@ struct ARViewContainer: UIViewRepresentable {
         fieldGoalOne.position = simd_make_float3(0, 0, 0.3)
 
         let fieldGoalTwo = try! Entity.load(named: "fieldGoal")
-        fieldGoalTwo.setScale([0.00013, 0.00013, 0.00013], relativeTo: fieldGoalTwo)
+        fieldGoalTwo.setScale([0.00015, 0.00015, 0.00015], relativeTo: fieldGoalTwo)
         fieldGoalTwo.setOrientation(
             simd_quatf(
                 ix: 0.0,
