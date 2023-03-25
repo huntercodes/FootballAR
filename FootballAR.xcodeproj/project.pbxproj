@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4118732629CD621000F04BAA /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118732529CD621000F04BAA /* ARViewContainer.swift */; };
+		4118732A29CE892600F04BAA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118732929CE892600F04BAA /* Coordinator.swift */; };
+		4118733029CE8D8B00F04BAA /* SpaceStation.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4118732F29CE8D8B00F04BAA /* SpaceStation.usdz */; };
 		417A441E28EFFB3C00CB9F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */; };
 		417A442028EFFB3C00CB9F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A441F28EFFB3C00CB9F84 /* ContentView.swift */; };
 		417A442428EFFB3D00CB9F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442328EFFB3D00CB9F84 /* Assets.xcassets */; };
 		417A442728EFFB3D00CB9F84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */; };
-		41BD22E729395D26006B884E /* footballPlayer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 41BD22E629395D26006B884E /* footballPlayer.usdz */; };
-		41DAEC3E28F2B4C900C877AD /* fieldGoal.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4118732529CD621000F04BAA /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		4118732929CE892600F04BAA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4118732F29CE8D8B00F04BAA /* SpaceStation.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SpaceStation.usdz; sourceTree = "<group>"; };
 		417A441A28EFFB3C00CB9F84 /* FootballAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417A441F28EFFB3C00CB9F84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		417A442328EFFB3D00CB9F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417A442628EFFB3D00CB9F84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		41BD22E629395D26006B884E /* footballPlayer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = footballPlayer.usdz; sourceTree = "<group>"; };
-		41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fieldGoal.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,8 @@
 			children = (
 				417A441D28EFFB3C00CB9F84 /* AppDelegate.swift */,
 				417A441F28EFFB3C00CB9F84 /* ContentView.swift */,
+				4118732529CD621000F04BAA /* ARViewContainer.swift */,
+				4118732929CE892600F04BAA /* Coordinator.swift */,
 				41DAEC3C28F2B4BA00C877AD /* 3D Assets */,
 				417A442328EFFB3D00CB9F84 /* Assets.xcassets */,
 				417A442528EFFB3D00CB9F84 /* Preview Content */,
@@ -75,8 +79,7 @@
 		41DAEC3C28F2B4BA00C877AD /* 3D Assets */ = {
 			isa = PBXGroup;
 			children = (
-				41DAEC3D28F2B4C900C877AD /* fieldGoal.usdz */,
-				41BD22E629395D26006B884E /* footballPlayer.usdz */,
+				4118732F29CE8D8B00F04BAA /* SpaceStation.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -140,9 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				417A442728EFFB3D00CB9F84 /* Preview Assets.xcassets in Resources */,
-				41BD22E729395D26006B884E /* footballPlayer.usdz in Resources */,
 				417A442428EFFB3D00CB9F84 /* Assets.xcassets in Resources */,
-				41DAEC3E28F2B4C900C877AD /* fieldGoal.usdz in Resources */,
+				4118733029CE8D8B00F04BAA /* SpaceStation.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4118732A29CE892600F04BAA /* Coordinator.swift in Sources */,
+				4118732629CD621000F04BAA /* ARViewContainer.swift in Sources */,
 				417A442028EFFB3C00CB9F84 /* ContentView.swift in Sources */,
 				417A441E28EFFB3C00CB9F84 /* AppDelegate.swift in Sources */,
 			);
